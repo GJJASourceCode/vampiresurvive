@@ -387,6 +387,7 @@ GameObject:
   - component: {fileID: 1755193668}
   - component: {fileID: 1755193667}
   - component: {fileID: 1755193670}
+  - component: {fileID: 1755193671}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -499,3 +500,17 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.7, y: 0.9}
   m_Direction: 0
+--- !u!114 &1755193671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755193666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfde5aacde378a348a46032f64cf5708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputVec: {x: 0, y: 0}
+  speed: 3
