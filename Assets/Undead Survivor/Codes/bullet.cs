@@ -7,7 +7,7 @@ public class bullet : MonoBehaviour
   public float damage;
   public int per;
 
-  public void private void OnServerInitialized(float damage, int per) 
+  public void OnServerInitialized(float damage, int per) 
   {  
      this.damage = damage;
      this.per = per;
