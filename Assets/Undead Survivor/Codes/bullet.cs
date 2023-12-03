@@ -32,7 +32,7 @@ void OnTriggerEnter2D(Collider2D collision)
       per--;
 
       if (per == -1) {
-          rigid.velocity = Vector2.zerp;
+          rigid.velocity = Vector2.zero;
           gameObject.SetActive(false);
   
       }
