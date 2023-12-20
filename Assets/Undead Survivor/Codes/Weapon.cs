@@ -86,7 +86,7 @@ public class Weapon : MonoBehaviour
              bullet.Rotate(rotVec);
              bullet.Translate(bullet.up * 2f, Space.World);
 
-             bullet.GetComponent<Bullet>().Init(damage, -1);
+             bullet.GetComponent<Bullet>().Init(damage, -1, Vector3.zero);
          }
     }
 
@@ -95,8 +95,14 @@ public class Weapon : MonoBehaviour
             if (!player.scanner.nearestTarget)
                 return;
 
+            Vector3 targetPos = player.scanner.nearestTarget.position;
+            Vector3 dir = targetPos - transform.position;
+            dir = dir.normalized;
+             
              Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
             bullet.position = transform.position;   
+            bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
+             bullet.GetComponent<Bullet>().Init(damage, count, dir);
     }           
 
 }

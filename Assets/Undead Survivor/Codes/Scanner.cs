@@ -21,6 +21,7 @@ public class Scanner : MonoBehaviour
     float diff = 100;
 
     foreach (RaycastHit2D target in targets) {
+      Debug.Log("Target");
       Vector3 myPos = transform.position;
       Vector3 targetPos = target.transform.position;
       float curDiff = Vector3.Distance(myPos, targetPos);
