@@ -6,6 +6,7 @@ public class LevelUp : MonoBehaviour
 {
     RectTransform rect;
     Item[] items;
+    public GameObject HUD;
     void Awake()
     {
         rect = GetComponent<RectTransform>();
@@ -13,12 +14,14 @@ public class LevelUp : MonoBehaviour
     }
     public void Show()
     {
+        HUD.SetActive(false);
             Next();
             rect.localScale = Vector3.one;
             GameManager.instance.Stop();
     }
     public void Hide()
     {
+        HUD.SetActive(true);
         rect.localScale = Vector3.zero;
         GameManager.instance.Resume();
     }
